@@ -13,17 +13,17 @@ Category.hasMany(Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongsToMany(Tags, {
+Product.belongsToMany(Tag, {
   through: {
-    model: ProductTags,
+    model: ProductTag,
     unique: false
   }
 });
 
 // Tags belongToMany Products (through ProductTag)
-Tags.belongsToMany(Products, {
+Tag.belongsToMany(Product, {
   through: {
-    model: ProductTags,
+    model: ProductTag,
     unique: false
   }
 });
